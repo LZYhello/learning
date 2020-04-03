@@ -59,18 +59,37 @@
 //	return 0;
 //}
 
+//交换两个变量（不创建临时变量）
+//int main()
+//{
+//	int a = 6;
+//	int b = 8;
+//	printf("a=%d b=%d\n", a, b);
+//	a = a^b;
+//	b = a^b;
+//	a = a^b;
+//	printf("a=%d b=%d" ,a, b);
+//
+//	return 0;
+//}
 
+//统计二进制中1的个数
+
+int Nnumberof1(int n)
+{
+	int count = 0;
+	while (n)
+	{
+		n = n&(n - 1);
+		count++；
+	}
+	return count;
+}
 int main()
 {
-	int a = 6;
-	int b = 8;
-	printf("a=%d b=%d\n", a, b);
-	a = a^b;
-	b = a^b;
-	a = a^b;
-	printf("a=%d b=%d" ,a, b);
-
+	int num = 0;
+	scanf("%d", &num);
+	int ret = Nenberof1(num);
+	printf("%d\n", ret);
 	return 0;
 }
-
-
